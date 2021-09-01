@@ -1,5 +1,6 @@
 # Project 3 [Name]
 
+<<<<<<< HEAD
 <h1>Bug Tracker</h1>
 
 This is a Full Stack MERN bug tracking system application that has 3 different level of users ranging from Low level users to Mid level users and lastly the Admin. Both low and mid-level users can submit a bug they encounter and the Admin will be able to view the submitted issue request. The admin would be able to assemble ticket requests based on status, move the bug to another status, or delete the bug.
@@ -28,3 +29,6 @@ Lastly the Admin users would be able to have full access in viewing submitted ti
 <img width="1337" alt="Admin User 2" src="https://user-images.githubusercontent.com/86312880/132004603-371f941c-0a39-4503-9c3e-60826513a6a1.png">
 
 
+=======
+hi this is the dev branch!
+>>>>>>> f9d4e4c (dev readme changed)
