@@ -1,9 +1,10 @@
 import React from 'react';
+import '../css/Header.css'
 
 function Header() {
   return (
     <div className="loginheader">
-     <h1>Bug Tracker</h1>
+     <h1>BugTracker</h1>
      
     </div>
   )
