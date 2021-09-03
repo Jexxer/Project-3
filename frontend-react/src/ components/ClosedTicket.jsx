@@ -1,5 +1,5 @@
 import React, {useEffect , useState} from 'react';
-import '../../css/Dashboard.css'
+import '../css/Dashboard.css'
 
 export default function ClosedTicket(props) {
     const [loading , setLoading] = useState(true)
