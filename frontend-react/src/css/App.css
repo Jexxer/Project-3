@@ -1,9 +1,5 @@
-.loginheader{
-    margin-left: 400px;
- 
-    
+
+.App {
+  text-align: center;
 }
 
-.loginpage {
-    border: 3px solid red ;
-}
