@@ -19,5 +19,6 @@
   "homepage": "https://github.com/Jexxer/Project-3#readme",
   "dependencies": {
     "cors": "^2.8.5"
+
   }
 }
