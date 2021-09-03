@@ -1,47 +1,56 @@
 import React, {useEffect , useState} from 'react';
 import '../../css/Dashboard.css'
-function OpenTicket(props) {
 
+export default function OpenTicket(props) {
+    const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
+    let url = 'http://localhost:4000/api/users'
 
     const populateTickets = () => {
-        for(let i = 0 ; i < 10 ; i++){
-            ticketArr.push(<div className = 'ticket'>
-                <span className = ''>Ticket name</span>
-                <span>Created: 09-17-21 at 8:45pm</span>
-                <span>Status: Pending</span>
+        for(let i = 0 ; i < tickets.length ; i++){
+            ticketArr.push(
+                <div className = 'ticket'>
+                    <span className = ''>{tickets[i].userName}</span>
+                    <span>Created: 09-17-21 at 8:45pm</span>
+                    <span>Status: Pending</span>
+                    <button>View Ticket</button>
             </div>)
         }
-        setTickets(ticketArr)
     } 
 
     useEffect(() => {
-        populateTickets()
+        fetch(url)
+        .then(res => res.json())
+        .then(res => { 
+            setTickets(res) 
+            setLoading(false)
+        })
+        .catch(err => { console.error(err) });        
+        
     },[])
     
-    if(tickets == null){
+    if(loading){
         return null;
     }
     else{
+        populateTickets()
+        console.log(tickets)
         return (
-            <div>
-                <div className = 'open-tickets'>
-                    <div className = 'ticket-header'>
-                        <div className = 'ticket-header-openclose'>My open tickets</div>
-                        <div className = 'submit-bug'>Submit Bug</div>
-                    </div>
+            <div className = 'open-tickets'>
+                
+                <div className = 'ticket-header'>
+                    <div className = 'ticket-header-openclose'>My open tickets</div>
+                        
+                    <button className = 'submit-bug'>Submit Bug</button>
+                </div>
                     
-                    <div className = 'ticket-container'>
-                        {tickets}
-                    </div>
-                    
+                <div className = 'ticket-container'>
+                    {ticketArr}
                 </div>
                 
             </div>
-    );
+        );
     }
 
 }
-
-export default OpenTicket;

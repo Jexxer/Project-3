@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './css/App.css';
-import OpenTicket from './components/low-level/OpenTicket';
-import ClosedTicket from './components/low-level/ClosedTicket'
+import { Route , Link , Redirect} from "react-router-dom";
+import Dashboard from './components/low-level/Dashboard';
+
 function App() {
   return (
     <div className="App">
-      <OpenTicket />
-      <ClosedTicket />
+
+      <Route exact path = '/dashboard' 
+          component = {Dashboard}
+      />
     </div>
   );
 }
