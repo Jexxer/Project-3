@@ -1,21 +1,25 @@
 import React, {useEffect , useState} from 'react';
+import {Link} from 'react-router-dom'
 import '../css/Dashboard.css'
 
 export default function ClosedTicket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
-    let url = 'http://localhost:4000/api/users'
-
+    let url = 'http://localhost:4000/api/tickts'
+    //creatorId
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
-            ticketArr.push(
-                <div className = 'ticket'>
-                    <span className = ''>{tickets[i].userName}</span>
-                    <span>Created: 09-17-21 at 8:45pm</span>
-                    <span>Status: Pending</span>
-                    <button>View Ticket</button>
-            </div>)
+            if(tickets[i].isOpen){
+                ticketArr.push(
+                    <div className = 'ticket'>
+                        <span className = ''>{tickets[i].title}</span>
+                        <span>Created: 09-17-21 at 8:45pm</span>
+                        <span>Status: Pending</span>
+                        <button><Link to = {`/tickets/${tickets[i].creatorId}`}>View Ticket</Link></button>
+                </div>)
+            }
+            
         }
     } 
 
