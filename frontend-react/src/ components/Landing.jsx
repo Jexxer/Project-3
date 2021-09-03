@@ -1,17 +1,16 @@
-import React from 'react'
-import Header from './Header'
-
-
+import React from 'react';
+import Header from './Header';
+import '../css/Landing.css';
 
 
 function Landing () {
   return (
    
-
-    <div className="loginpage">
-      <div className= "header">
+    <div className= "container">
+    <div className="logincontainer">
+    
         <Header/>
-        </div>
+    
      <input type="email" 
                        className="form" 
                        id="email" 
@@ -24,11 +23,14 @@ function Landing () {
                         id="Password" 
                         placeholder="Password"
                     />
+<div className= "submit">
+                    <button>submit</button>
+</div>
 
-
-
+</div>
 
                     </div>
+                    
 
 
  ) }
