@@ -11,7 +11,7 @@ const usersController = require('./controllers/Users') // add users controller p
 app.use('/api/users', usersController)
 
 const ticketsController = require('./controllers/Tickets') // add tickets controller path './controllers/FILE_NAME'
-app.use('/api/tickts', ticketsController)
+app.use('/api/tickets', ticketsController)
 /* End Controllers Here */
 
 app.set('port', 4000)
