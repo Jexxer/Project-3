@@ -1,0 +1,20 @@
+.ticket-container{
+    border: 1px solid black;
+}
+.ticket-header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.ticket-header-openclose{
+}
+.submit-bug{
+    border: 1px solid black;
+    float: right;
+}
+.ticket{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
