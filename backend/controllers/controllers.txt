@@ -1,0 +1,11 @@
+put your controll commands here
+
+ex:
+app.get('/', (req, res, next) => {
+    Model.find({})
+        .then(do something)
+        .catch(console.error)
+        .finally(() => {
+            process.exit()
+        })
+})
