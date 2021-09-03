@@ -6,11 +6,11 @@ export default function ClosedTicket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
-    let url = 'http://localhost:4000/api/tickts'
+    let url = 'http://localhost:4000/api/tickets'
     //creatorId
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
-            if(tickets[i].isOpen){
+            if(tickets[i].isOpen === false){
                 ticketArr.push(
                     <div className = 'ticket'>
                         <span className = ''>{tickets[i].title}</span>

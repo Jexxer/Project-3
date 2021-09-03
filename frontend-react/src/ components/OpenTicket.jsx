@@ -6,7 +6,7 @@ export default function OpenTicket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
-    let url = 'http://localhost:4000/api/tickts'
+    let url = 'http://localhost:4000/api/tickets'
 
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
