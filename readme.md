@@ -16,4 +16,10 @@ Low level users would only have access to view their submitted tickets on their 
 <img width="1336" alt="Low level user screen" src="https://user-images.githubusercontent.com/86312880/132002861-ec0dfd10-135e-40c4-b578-de45b9c1ebfa.png">
 
 
+Mid-level Users would have access to a time table containing how many issue requests were completed, currently open and the average time in the time frames of "today, week, month and all time". Mid level users would also have access to view the status of a submitted bug in the Needs Attention section. Where they will find the reported issue and the admin review. 
+
+<img width="1336" alt="Mid level User" src="https://user-images.githubusercontent.com/86312880/132003604-906a198c-d546-46af-993a-86c1909ac02c.png">
+
+
+
 
