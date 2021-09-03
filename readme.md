@@ -6,5 +6,7 @@ This is a Full Stack MERN bug tracking system application that has 3 different l
 
 
 The landing page will require a login for Users to access the site, if the user has forgotten their password, they will have the ability to click the forgot the password button and have that issue resolved quickly. 
+
+
 ![download](https://user-images.githubusercontent.com/86312880/132001086-bc090234-f3a0-4b5f-9f1c-8b7fe2355d41.png)
 
