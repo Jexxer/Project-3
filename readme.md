@@ -21,5 +21,10 @@ Mid-level Users would have access to a time table containing how many issue requ
 <img width="1336" alt="Mid level User" src="https://user-images.githubusercontent.com/86312880/132003604-906a198c-d546-46af-993a-86c1909ac02c.png">
 
 
+Lastly the Admin users would be able to have full access in viewing submitted tickets and would allow administrators to configure the bug statuses and to what extent a bug in a particular status can be moved. For example if a User is locked out, the issue might need to get escalated and the admin is able to control the status. Admin is also able to sort and filter within different statuses of the issues reported. 
+
+<img width="1334" alt="Admin User" src="https://user-images.githubusercontent.com/86312880/132004584-8f8b210b-ef90-44ec-926a-a85ae41ea365.png">
+
+<img width="1337" alt="Admin User 2" src="https://user-images.githubusercontent.com/86312880/132004603-371f941c-0a39-4503-9c3e-60826513a6a1.png">
 
 
