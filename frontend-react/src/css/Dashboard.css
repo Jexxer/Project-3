@@ -1,20 +1,41 @@
-.ticket-container{
-    border: 1px solid black;
+.dashboard-div {
+  width: 60%;
+  margin-top: 12%;
+  margin-bottom: 12%;
 }
-.ticket-header{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    justify-content: space-between;
+
+.ticket-container {
+  border: 1px solid black;
 }
-.ticket-header-openclose{
+.ticket-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }
-.submit-bug{
-    border: 1px solid black;
-    float: right;
+.ticket-header-openclose {
 }
-.ticket{
-    display: flex;
-    border: 1px solid black;
-    justify-content: space-evenly;
+.submit-bug {
+  border: 1px solid black;
+  float: right;
+}
+.ticket {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-evenly;
+}
+.navbar {
+  border: black 2px solid;
+  width: 15%;
+}
+.navbar button {
+  margin: 10px;
+}
+.usericon {
+  width: 50px;
+}
+.parent-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
 }
