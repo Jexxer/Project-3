@@ -1,7 +1,15 @@
+const User = require("../models/UserModel");
+const userseeds = require("./seeds.json");
 
+const Ticket = require("../models/TicketModel");
+const ticketseeds = require("./ticketSeeds.json");
 
-const User = require('../models/UserModel')
-const userseeds = require('./seeds.json')
+User.deleteMany({})
+  .then(() => {
+    return User.insertMany(userseeds);
+  })
+  .then(console.log)
+  .catch(console.error);
 
 const Ticket = require('../models/TicketModel')
 const ticketseeds = require('./ticketSeeds.json')
@@ -19,3 +27,4 @@ Ticket.deleteMany({})
     })
     .then(console.log)
     .catch(console.error)
+
