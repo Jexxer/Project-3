@@ -6,7 +6,7 @@ import './css/App.css';
 
 import { Route , Link , Redirect} from "react-router-dom";
 import Dashboard from './ components/Dashboard';
-
+import newTicketPage from './ components/newTicketPage'; // delete
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
           component = {Landing}
       /> 
         
-      
-
-
+      <Route exact path = '/tickets/new'
+          component = {newTicketPage}
+      /> 
       <Route exact path = '/dashboard' 
           component = {Dashboard}
       />
