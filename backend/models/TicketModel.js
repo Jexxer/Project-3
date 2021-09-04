@@ -5,6 +5,7 @@ const TicketSchema = new mongoose.Schema({
     dateCreated: {type: Date, default: Date.now},
     status: {type: String, required: true},
     creatorId: String,
+    isOpen: Boolean,
     message: String
 });
 

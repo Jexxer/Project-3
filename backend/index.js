@@ -9,6 +9,9 @@ app.use(express.urlencoded({extended: true}))
 /* Start Controllers Here */
 const usersController = require('./controllers/Users') // add users controller path './controllers/FILE_NAME'
 app.use('/api/users', usersController)
+
+const ticketsController = require('./controllers/Tickets') // add tickets controller path './controllers/FILE_NAME'
+app.use('/api/tickets', ticketsController)
 /* End Controllers Here */
 
 app.set('port', 4000)
