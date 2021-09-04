@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const mongoURI = 'mongodb://localhost/bugtracker'
+const mongoURI = 'mongodb+srv://jexxe:Cherokee01@cluster0.ja5th.mongodb.net/bugtracker'
 
 mongoose
     .connect(mongoURI, {
