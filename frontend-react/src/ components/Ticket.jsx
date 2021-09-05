@@ -2,13 +2,13 @@ import React, {useEffect , useState} from 'react';
 import {Link} from 'react-router-dom'
 import '../css/Dashboard.css'
 
-export default function OpenTicket(props) {
+export default function Ticket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
     let url = 'http://localhost:4000/api/tickets'
 
-    const populateTickets = () => {
+    const populateTicket = () => {
         for(let i = 0 ; i < tickets.length ; i++){
             ticketArr.push(
                 <div className = 'ticket'>
@@ -35,7 +35,7 @@ export default function OpenTicket(props) {
         return null;
     }
     else{
-        populateTickets()
+        populateTicket()
         console.log(tickets)
         return (
             <div className = 'open-tickets'>
