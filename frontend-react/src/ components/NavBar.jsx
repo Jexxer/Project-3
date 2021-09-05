@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBar(props) {
+export default function NavBar(props) {
   return (
     <div className="NavBar1">
       <div className="dashborad-btn">
@@ -12,5 +12,3 @@ function NavBar(props) {
     </div>
   );
 }
-
-export default NavBar;

@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/newTicketPage.css";
+import NavBar from "./NavBar";
 
 function newTicketPage(props) {
 
@@ -13,6 +14,9 @@ function newTicketPage(props) {
 
   return (
     <div class="testbox">
+      <div className="navbar">
+        <NavBar />
+      </div>
       <form action="/">
         <h1>New bug Form</h1>
         <p>
