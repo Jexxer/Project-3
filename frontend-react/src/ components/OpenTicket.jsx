@@ -15,7 +15,7 @@ export default function OpenTicket(props) {
                     <span className = 'ticket-title'>{tickets[i].title}</span>
                     <span className = 'ticket-date'>{tickets[i].dateCreated}</span>
                     <div className="ticket-status"><span>Status: Pending</span></div>
-                    <button><Link to = {`/tickets/details/${tickets[i].creatorId}`}>View Ticket</Link></button>
+                    <button><Link to = {`/tickets/details/${tickets[i]._id}`}>View Ticket</Link></button>
             </div>)
         }
     } 
