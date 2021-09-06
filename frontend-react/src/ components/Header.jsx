@@ -1,10 +1,12 @@
 import React from 'react';
 import '../css/Header.css'
+import gif from '../css/bugsvg.svg'
+<css />
 
 function Header() {
   return (
     <div className="loginheader">
-     <h1>BugTracker</h1>
+     <img src= {gif}/>
      
     </div>
   )
