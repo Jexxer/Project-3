@@ -16,7 +16,7 @@ export default function ClosedTicket(props) {
                         <span className = 'ticket-title'>{tickets[i].title}</span>
                         <span className = 'ticket-date'>{tickets[i].dateCreated}</span>
                         <span className = 'ticket-status'>{tickets[i].status}</span>
-                        <button><Link to = {`/tickets/${tickets[i].creatorId}`}>View Ticket</Link></button>
+                        <button><Link to = {`/tickets/details/${tickets[i].creatorId}`}>View Ticket</Link></button>
                 </div>)
             }
             

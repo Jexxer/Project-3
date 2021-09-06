@@ -15,7 +15,7 @@ export default function Ticket(props) {
                     <span className = ''>{tickets[i].title}</span>
                     <span>Created: 09-17-21 at 8:45pm</span>
                     <span>Status: Pending</span>
-                    <button><Link to = {`/tickets/${tickets[i].creatorId}`}>View Ticket</Link></button>
+                    <button><Link to = {`/tickets/details/${tickets[i].creatorId}`}>View Ticket</Link></button>
             </div>)
         }
     } 
