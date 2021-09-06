@@ -12,9 +12,9 @@ export default function OpenTicket(props) {
         for(let i = 0 ; i < tickets.length ; i++){
             ticketArr.push(
                 <div className = 'ticket'>
-                    <span className = ''>{tickets[i].title}</span>
-                    <span>Created: 09-17-21 at 8:45pm</span>
-                    <span>Status: Pending</span>
+                    <span className = 'ticket-title'>{tickets[i].title}</span>
+                    <span className = 'ticket-date'>Created: 09-17-21 at 8:45pm</span>
+                    <span className = 'ticket-status'>Status: Pending</span>
                     <button><Link to = {`/tickets/${tickets[i].creatorId}`}>View Ticket</Link></button>
             </div>)
         }

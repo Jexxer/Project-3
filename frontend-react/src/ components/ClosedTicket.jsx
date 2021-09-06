@@ -13,9 +13,9 @@ export default function ClosedTicket(props) {
             if(tickets[i].isOpen === false){
                 ticketArr.push(
                     <div className = 'ticket'>
-                        <span className = ''>{tickets[i].title}</span>
-                        <span>{tickets[i].dateCreated}</span>
-                        <span>{tickets[i].status}</span>
+                        <span className = 'ticket-title'>{tickets[i].title}</span>
+                        <span className = 'ticket-date'>{tickets[i].dateCreated}</span>
+                        <span className = 'ticket-status'>{tickets[i].status}</span>
                         <button><Link to = {`/tickets/${tickets[i].creatorId}`}>View Ticket</Link></button>
                 </div>)
             }
