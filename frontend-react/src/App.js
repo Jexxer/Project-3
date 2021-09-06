@@ -13,6 +13,7 @@ import myProfile from "./ components/myProfile";
 function App() {
   return (
     <div className="App">
+
       <Route exact path="/" component={Landing} />
       <Route exact path="/users/:id" component={myProfile} />
 
@@ -21,6 +22,7 @@ function App() {
       <Route exact path="/dashboard" component={Dashboard} />
 
       <Route exact path="/tickets/details/:id" component={Ticket} />
+
     </div>
   );
 }

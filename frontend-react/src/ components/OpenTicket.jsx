@@ -13,9 +13,9 @@ export default function OpenTicket(props) {
             ticketArr.push(
                 <div className = 'ticket'>
                     <span className = 'ticket-title'>{tickets[i].title}</span>
-                    <span className = 'ticket-date'>Created: 09-17-21 at 8:45pm</span>
-                    <span className = 'ticket-status'>Status: Pending</span>
-                    <button><Link to = {`/tickets/details/${tickets[i].creatorId}`}>View Ticket</Link></button>
+                    <span className = 'ticket-date'>{tickets[i].dateCreated}</span>
+                    <div className="ticket-status"><span>Status: Pending</span></div>
+                    <button><Link to = {`/tickets/details/${tickets[i]._id}`}>View Ticket</Link></button>
             </div>)
         }
     } 
@@ -43,7 +43,7 @@ export default function OpenTicket(props) {
                 <div className = 'ticket-header'>
                     <div className = 'ticket-header-openclose'>My open tickets</div>
                         
-                    <button className = 'submit-bug'><Link to = '/bug?submit'>Submit Bug</Link></button>
+                    <button className = 'submit-bug'><Link to = '/tickets/new'>Submit Bug</Link></button>
                 </div>
                     
                 <div className = 'ticket-container'>
