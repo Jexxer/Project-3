@@ -43,7 +43,7 @@ export default function Ticket(props) {
                 <div className = 'ticket-header'>
                     <div className = 'ticket-header-openclose'>My open tickets</div>
                         
-                    <button className = 'submit-bug'><Link to = '/bug?submit'>Submit Bug</Link></button>
+                    <button className = 'submit-bug'><Link to = '/tickets/new'>Submit Bug</Link></button>
                 </div>
                     
                 <div className = 'ticket-container'>
