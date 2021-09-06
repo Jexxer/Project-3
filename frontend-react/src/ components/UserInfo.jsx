@@ -30,11 +30,9 @@ function UserInfo(props) {
           </h3>
           <ul>
             <li>
-              <a href="#">My Profile</a>
+              <a href="/users/:id">My Profile</a>
             </li>
-            <li>
-              <a href="#">Account</a>
-            </li>
+
             <li>
               <a href="/">Logout</a>
             </li>
