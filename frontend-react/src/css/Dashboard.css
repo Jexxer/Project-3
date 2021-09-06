@@ -1,20 +1,134 @@
-.ticket-container{
-    border: 1px solid black;
+.dashboard-div {
+  width: 60%;
+  margin-top: 12%;
+  margin-bottom: 12%;
 }
-.ticket-header{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    justify-content: space-between;
+
+.ticket-container {
+  border: 1px solid black;
 }
-.ticket-header-openclose{
+.ticket-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }
-.submit-bug{
-    border: 1px solid black;
-    float: right;
+.ticket span {
+  width: 25%;
 }
-.ticket{
-    display: flex;
-    border: 1px solid black;
-    justify-content: space-evenly;
+.ticket-title {
+  text-align: left;
+}
+.ticket-status{
+  padding: 0.25rem 0.5rem;
+  background-color: rgb(223, 223, 223);
+  border-radius: 4px;
+}
+.ticket-header-openclose {
+}
+.submit-bug {
+  border: 1px solid black;
+  float: right;
+}
+.ticket {
+  display: flex;
+  border: 1px solid black;
+  padding: 0.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.navbar {
+  border: black 2px solid;
+  width: 15%;
+}
+.navbar button {
+  margin: 10px;
+}
+.usericon {
+  width: 50px;
+}
+.parent-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+
+/* USER ICON STYLING */
+
+.action {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+}
+.action .profile {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.action .profile img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.action .menu {
+  position: absolute;
+  top: 80px;
+  right: -10px;
+  padding: 10px 20px;
+  background: black;
+  width: 200px;
+  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.action .menu::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: black;
+  transform: rotate(45deg);
+}
+.action .menu h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: gray;
+  line-height: 1.2em;
+}
+.action .menu h3 span {
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+}
+.action .menu ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+.action .menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.action .menu ul li :hover a {
+  color: red;
 }
