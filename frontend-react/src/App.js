@@ -23,7 +23,7 @@ function App() {
           component = {Dashboard}
       />
       
-      <Route exact path = '/tickets/details/:id' 
+      <Route exact path = '/tickets/details/:id'
           component = {Ticket}
       />
     </div>
