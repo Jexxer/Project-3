@@ -13,10 +13,10 @@
   margin-bottom: 10px;
   justify-content: space-between;
 }
-.ticket span{
+.ticket span {
   width: 25%;
 }
-.ticket-title{
+.ticket-title {
   text-align: left;
 }
 .ticket-status{
