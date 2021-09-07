@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/NavBar.css";
 
 export default function NavBar(props) {
   return (
@@ -9,10 +10,14 @@ export default function NavBar(props) {
         </button>
       </div>
       <div className="tickets-btn">
-        <button>Tickets</button>
+        <button>
+          <a href="/tickets">Tickets</a>
+        </button>
       </div>
       <div className="settings-btn">
-        <button>Settings</button>
+        <button>
+          <a href="/settings">Settings</a>
+        </button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import usericon from "../usericon.png";
+import "../css/UserInfo.css";
 
 function UserInfo(props) {
   const [userDisplay, setUserDisplay] = useState("none");
