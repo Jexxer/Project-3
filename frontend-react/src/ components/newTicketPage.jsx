@@ -13,7 +13,7 @@ function NewTicketPage(props) {
     axios
       .post("http://localhost:4000/api/tickets/", {
         title: `${title}`,
-        dateCreated: `${Date.now()}`,
+        dateCreated: Date.now(),
         status: "Pending",
         creatorId: "none",
         isOpen: true,
