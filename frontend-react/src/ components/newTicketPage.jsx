@@ -1,53 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "../css/newTicketPage.css";
 import NavBar from "./NavBar";
 
-function newTicketPage(props) {
+function NewTicketPage(props) {
+  const [bugTitle, setBugtitle] = useState("");
+  const [bugLocation, setBugLocation] = useState("");
+  const [bugDetails, setBugDetails] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState("");
 
-    function handleChange(){
-        // do something for each change to a field. (update variables?)
-    }
+  function postTicket(title, message) {
+    axios
+      .post("http://localhost:4000/api/tickets/", {
+        title: `${title}`,
+        dateCreated: `${Date.now()}`,
+        status: "Pending",
+        creatorId: "none",
+        isOpen: true,
+        message: `${message}`,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
-    function handleSubmit(){
-        // do something with input in datafields
-    }
+  function handlesSubmit(e) {
+    e.preventDefault();
+    postTicket(bugTitle, bugDetails);
+    setBugDetails("");
+    setBugtitle("");
+    setBugLocation("");
+    setIsSubmitted(true);
+  }
+  if (!isSubmitted) {
+    return (
+        <div className="new-bug-page">
 
-  return (
-    <div class="testbox">
-      <div className="navbar">
-        <NavBar />
+            <div className="navbar">
+                <NavBar />
+            </div>
+
+            <div className="form-container">
+                <form onSubmit={handlesSubmit}>
+                    <h1>New bug Form</h1>
+                    <p>
+                        Please send us details about the bug you would like to report. Our
+                        Developers will analyze your complaint and take the appropriate
+                        measures in order that the reported situation will not occur at any
+                        other time in the future.
+                    </p>
+                    <hr />
+                    <div className="titel-item">
+                        <p>Title</p>
+                        <input
+                        type="text"
+                        value={bugTitle}
+                        onChange={(e) => setBugtitle(e.target.value)}
+                        />
+                    </div>
+                    <div className="location-item">
+                        <p>Bug location? (path/URL)</p>
+                        <input
+                        type="text"
+                        value={bugLocation}
+                        onChange={(e) => setBugLocation(e.target.value)}
+                        />
+                    </div>
+                    <div className="details-item">
+                        <p>Bug details</p>
+                        <div className="details-textarea">
+                            <textarea
+                            rows="5"
+                            value={bugDetails}
+                            onChange={(e) => setBugDetails(e.target.value)}
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div className="form-submit-btn">
+                        <input type="submit" value="Submit" />
+                    </div>
+                
+                </form>
+            </div>
       </div>
-      <form action="/">
-        <h1>New bug Form</h1>
-        <p>
-          Please send us details about the bug you would like to report. Our
-          Developers will analyze your complaint and take the appropriate
-          measures in order that the reported situation will not occur at any
-          other time in the future.
-        </p>
-        <hr />
-        <div class="item">
-          <p>Email</p>
-          <input type="text" name="name" />
+    );
+  } else if (isSubmitted) {
+    return (
+        <div className="form-submit">
+            <NavBar />
+
+            <dev className="form-submit-right">
+              <p>Thanks for submitting!</p>
+            </dev>
         </div>
-        <div class="item location">
-          <p>Bug location? (path/URL)</p>
-          <input type="text" name="name" />
-        </div>
-        <div class="item complaint-details">
-          <p>Bug details</p>
-          <div class="complaint-details-item">
-            <textarea rows="5"></textarea>
-          </div>
-        </div>
-        <div class="btn-block">
-          <button type="submit" href="/">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
-  );
+    );
+  }
 }
 
-export default newTicketPage;
+export default NewTicketPage;
