@@ -6,7 +6,7 @@ import '../css/Landing.css';
 import Dashboard from './Dashboard'
 
 
-
+// new api: https://bugtracker-api-v1.herokuapp.com/api/users
 function Landing () {
  const [email, setEmail] = useState('')
  const [password, setPassword]= useState ('')
