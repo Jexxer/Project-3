@@ -1,8 +1,8 @@
-.new-bug-page{
+.new-bug-page {
   display: flex;
 }
 
-.new-bug-page .form-container{
+.new-bug-page .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   height: 100vh;
 }
 
-.new-bug-page form{
+.new-bug-page form {
   padding: 20px;
   height: 60vh;
   width: 40%;
@@ -19,29 +19,29 @@
   box-shadow: 0 0 5px 1px grey;
 }
 
-.new-bug-page p{
+.new-bug-page p {
   margin: 1rem;
 }
 
-.new-bug-page form input{
+.new-bug-page form input {
   width: 40%;
 }
 
-.new-bug-page form textarea{
+.new-bug-page form textarea {
   width: 80%;
   margin-bottom: 2rem;
 }
 
 .new-bug-page form input,
-.new-bug-page form textarea{
+.new-bug-page form textarea {
   padding: 5px;
 }
 
-.form-submit{
+.form-submit {
   display: flex;
 }
 
-.form-submit-right{
+.form-submit-right {
   height: 100vh;
   width: 100%;
   display: flex;

@@ -8,12 +8,15 @@ import { Route, Link, Redirect } from "react-router-dom";
 import Dashboard from "./ components/Dashboard";
 import newTicketPage from "./ components/newTicketPage"; // delete
 import Ticket from "./ components/Ticket";
-import myProfile from "./ components/myProfile";
+import myProfile from "./ components/MyProfile";
+import UserInfo from "./ components/UserInfo";
+import Settings from "./ components/Settings";
+import AllTickets from "./ components/AllTickets";
 
 function App() {
   return (
     <div className="App">
-
+      <UserInfo />
       <Route exact path="/" component={Landing} />
       <Route exact path="/users/:id" component={myProfile} />
 
@@ -22,7 +25,8 @@ function App() {
       <Route exact path="/dashboard" component={Dashboard} />
 
       <Route exact path="/tickets/details/:id" component={Ticket} />
-
+      <Route exact path="/settings" component={Settings} />
+      <Route exact path="/tickets" component={AllTickets} />
     </div>
   );
 }
