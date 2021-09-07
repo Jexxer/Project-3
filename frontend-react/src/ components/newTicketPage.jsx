@@ -11,7 +11,7 @@ function NewTicketPage(props) {
 
   function postTicket(title, message) {
     axios
-      .post("http://localhost:4000/api/tickets/", {
+      .post("https://bugtracker-api-v1.herokuapp.com/api/tickets", {
         title: `${title}`,
         dateCreated: Date.now(),
         status: "Pending",

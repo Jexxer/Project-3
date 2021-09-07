@@ -6,7 +6,7 @@ export default function Ticket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
 
-    let url = `http://localhost:4000/api/tickets/${props.match.params.id}`
+    let url = `https://bugtracker-api-v1.herokuapp.com/api/tickets/${props.match.params.id}`
 
     useEffect(() => {
         fetch(url)

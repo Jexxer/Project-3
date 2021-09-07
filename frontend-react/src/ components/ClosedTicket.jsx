@@ -6,7 +6,7 @@ export default function ClosedTicket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
-    let url = 'http://localhost:4000/api/tickets'
+    let url = 'https://bugtracker-api-v1.herokuapp.com/api/tickets'
     //creatorId
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
