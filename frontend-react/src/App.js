@@ -23,12 +23,12 @@ function App() {
 
   if (loggedInUser === "") {
     return (
-      <Landing loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} userInfo={userInfo} setUserInfo={setUserInfo}/>
+      <Landing userInfo={userInfo} setUserInfo={setUserInfo}/>
     );
   } else {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar userInfo={userInfo}/>
         <Route exact path="/" render={() => (
             <Dashboard userInfo={userInfo} />
           )}/>

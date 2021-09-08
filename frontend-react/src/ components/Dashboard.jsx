@@ -6,8 +6,6 @@ import OpenTicket from "./OpenTicket";
 import UserInfo from "./UserInfo";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-import NavBar from "./NavBar";
-
 
 function Dashboard({userInfo}) {
 
@@ -33,7 +31,7 @@ function Dashboard({userInfo}) {
     return (
       <div className="dashboard-container">
           <h1>BugTracker</h1>
-            <h3 className="dashboard-welcome-msg">Welcome back {username}!</h3>
+            <h3 className="dashboard-welcome-msg">Welcome back {username[0].toUpperCase() + username.substring(1)}!</h3>
         <div className="dashboard-div">
         <Link to="/tickets/new" className="dashboard-new-bug-link">New Ticket</Link>
         <Tabs>

@@ -18,12 +18,16 @@ export default function ClosedTicket(props) {
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
             const dateFormated = new Date(tickets[i].dateCreated)
-            if(tickets[i].isOpen == false){
+            if(tickets[i].isOpen == false && tickets[i].creatorId == localStorage.getItem("userId").replace(/['"]+/g, '')){
                 ticketArr.push(
                 <AccordionItem>
                     <AccordionItemHeading>
                         <AccordionItemButton>
-                            {tickets[i].title}
+                            <div className="accordion-title">
+                                <span id="accordion-span-title">{tickets[i].title}</span>
+                                <span className='span-hide'>{tickets[i].status}</span>
+                                <span className='span-hide'>{dateFormated.toDateString()}</span>
+                            </div>
                         </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
