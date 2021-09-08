@@ -4,7 +4,7 @@ import Header from "./Header";
 import "../css/Landing.css";
 
 
-function Landing({ loggedInUser, setLoggedInUser, userInfo, setUserInfo }) {
+function Landing({ userInfo, setUserInfo }) {
 
   const [usernameInput, setUsernameInput] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +21,7 @@ function Landing({ loggedInUser, setLoggedInUser, userInfo, setUserInfo }) {
           // check if username matches
           if(username === users[i].userName && password === users[i].password || username === users[i].email && password === users[i].password){
             //check that the password matches
+            setUserInfo(users[i])
             console.log('you logged in!')
             localStorage.setItem("loggedInUser", JSON.stringify(users[i].userName))
             localStorage.setItem("privLevel", JSON.stringify(users[i].privLevel))
@@ -34,7 +35,7 @@ function Landing({ loggedInUser, setLoggedInUser, userInfo, setUserInfo }) {
             console.log(`Wrong info. Try again`)
           }
         }
-        if(localStorage.getItem("loggedInUser") == ""){
+        if(localStorage.getItem("loggedInUser").replace(/['"]+/g, '') == ""){
           setFailedLogin("block")
         }
         console.log('finished api call, now checking for errors')

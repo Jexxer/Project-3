@@ -18,7 +18,7 @@ export default function OpenTicket(props) {
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
             const dateFormated = new Date(tickets[i].dateCreated)
-            if(tickets[i].isOpen == true && tickets[i].creatorId == localStorage.getItem("userId").replace(/['"]+/g, '')){
+            if(tickets[i].isOpen == true){
                 ticketArr.push(
                 <AccordionItem>
                     <AccordionItemHeading>

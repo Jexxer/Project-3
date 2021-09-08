@@ -1,6 +1,3 @@
-.open-ticket-item{
-    /* border: 2px solid black; */
-}
 
 .accordion-container{
     margin: 1rem;
@@ -8,10 +5,65 @@
     background-color: white;
 }
 
+.accordion__button{
+    display: flex;
+    align-items: center;
+}
+
+.accordion-title{
+    width: 100%;
+    text-align: left;
+}
+
+#accordion-span-title{
+    text-align: left;
+}
+
+.open-ticket-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.open-ticket-status{
+    text-align: left;
+}
+
 .open-ticket-link{
     text-decoration: none;
     color: white;
     background-color: blue;
     border-radius: 4px;
-    padding: 5px;
+    padding: 5px 10px;
+}
+
+.span-hide{
+    display: none;
+}
+
+@media(min-width: 700px){
+    .span-hide{
+        display: block;
+    }
+    .accordion__button{
+        align-items: center;
+    }
+    .accordion-title{
+        display: flex;
+        text-align: center;
+    }
+    .accordion-title span{
+        width: 33%;
+    }
+    #accordion-span-title{
+        text-align: left;
+    }
+    .open-ticket-item{
+        text-align: left;
+        padding: 20px;
+        align-items: center;
+    }
+    .open-ticket-link{
+        align-self: center;
+    }
+    
 }
