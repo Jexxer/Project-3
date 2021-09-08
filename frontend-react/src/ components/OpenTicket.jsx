@@ -23,14 +23,24 @@ export default function OpenTicket(props) {
                 <AccordionItem>
                     <AccordionItemHeading>
                         <AccordionItemButton>
-                            {tickets[i].title}
+                            
+                            <div className="accordion-title">
+                                <span id="accordion-span-title">{tickets[i].title}</span>
+                                <span className='span-hide'>{tickets[i].status}</span>
+                                <span className='span-hide'>{tickets[i].dateCreated}</span>
+                                <span className='span-hide'>{tickets[i].creatorId}</span>
+                            </div>
+                            
                         </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                         <div className="open-ticket-item">
-                            <p className="open-ticket-status">Status: {tickets[i].status}</p>
-                            <p className = 'open-ticket-date'>Date created: {dateFormated.toDateString()}</p>
-                            <Link to = {`/tickets/details/${tickets[i]._id}`} className="open-ticket-link">View Ticket</Link>
+                            <div className="dashboard-ticket-message-container">
+                                <p className="open-ticket-status">{tickets[i].message}</p>
+                            </div>
+                            <div className="dashboard-link-container">
+                                <Link to = {`/tickets/details/${tickets[i]._id}`} className="open-ticket-link">View Ticket</Link>
+                            </div>
                         </div>
                     </AccordionItemPanel>
                 </AccordionItem>

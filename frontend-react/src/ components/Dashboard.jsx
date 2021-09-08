@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import ClosedTicket from "./ClosedTicket";
 import OpenTicket from "./OpenTicket";
 import UserInfo from "./UserInfo";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 
 import NavBar from "./NavBar";
 
@@ -32,8 +32,10 @@ function Dashboard({userInfo}) {
 
     return (
       <div className="dashboard-container">
-          <h3 className="dashboard-welcome-msg">Welcome back {username}!</h3>
+          <h1>BugTracker</h1>
+            <h3 className="dashboard-welcome-msg">Welcome back {username}!</h3>
         <div className="dashboard-div">
+        <Link to="/tickets/new" className="dashboard-new-bug-link">New Ticket</Link>
         <Tabs>
           <TabList>
             <Tab>Open Tickets</Tab>
