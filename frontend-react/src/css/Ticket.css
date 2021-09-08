@@ -1,5 +1,23 @@
 .ticket-container {
+  margin: auto;
+  /* border: 2px solid black; */
+  width: 60%;
+  border-radius: .2%;
+}
+ul{
   border: 1px solid black;
+  padding: 0;
+}
+li {
+  background-color: #f4f4f4;
+  list-style-type: none;
+  /* border: 1px solid black; */
+}
+li span{
+  float: left;
+}
+li:hover{
+  background-color: #ddd;
 }
 .ticket-header {
   display: flex;
@@ -20,21 +38,5 @@
 }
 .ticket-header-openclose {
 }
-.submit-bug {
-  border: 1px solid black;
-  float: right;
-}
-.ticket {
-  display: flex;
-  border: 1px solid black;
-  padding: 0.5rem;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0.5rem 1rem;
-  border-radius: 4px;
-}
-.parent-div {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 0%;
-}
+
+
