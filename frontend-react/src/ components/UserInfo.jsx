@@ -6,9 +6,9 @@ function UserInfo(props) {
   const [userDisplay, setUserDisplay] = useState("none");
 
   function toggle() {
-    if (userDisplay == "block") {
+    if (userDisplay === "block") {
       setUserDisplay("none");
-    } else if (userDisplay == "none") {
+    } else if (userDisplay === "none") {
       setUserDisplay("block");
     }
   }
@@ -19,7 +19,7 @@ function UserInfo(props) {
         <div className="profile">
           <img
             className="usericon"
-            src={usericon}
+            src={localStorage.getItem("profilePic").replace(/['"]+/g, '')}
             alt="usericon"
             onClick={toggle}
           />
@@ -35,7 +35,10 @@ function UserInfo(props) {
             </li>
 
             <li>
-              <a href="/">Logout</a>
+              <button onClick={() => {
+                localStorage.setItem("loggedInUser", JSON.stringify(""));
+                window.location.reload(false)
+              }}>Logout</button>
             </li>
           </ul>
         </div>

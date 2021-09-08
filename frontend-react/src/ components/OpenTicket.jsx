@@ -10,10 +10,11 @@ export default function OpenTicket(props) {
 
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
+            const dateFormated = new Date(tickets[i].dateCreated)
             ticketArr.push(
                 <div className = 'ticket'>
                     <span className = 'ticket-title'>{tickets[i].title}</span>
-                    <span className = 'ticket-date'>{tickets[i].dateCreated}</span>
+                    <span className = 'ticket-date'>{dateFormated.toDateString()}</span>
                     <div className="ticket-status"><span>Status: Pending</span></div>
                     <button><Link to = {`/tickets/details/${tickets[i]._id}`}>View Ticket</Link></button>
             </div>)
@@ -36,7 +37,6 @@ export default function OpenTicket(props) {
     }
     else{
         populateTickets()
-        console.log(tickets)
         return (
             <div className = 'open-tickets'>
                 
