@@ -4,14 +4,6 @@ import { slide as Menu } from "react-burger-menu";
 
 export default function NavBar(props) {
 
-  // class Example extends React.Component {
-  //   showSettings (event) {
-  //     event.preventDefault();
-      
-      
-      
-  //   }
-  // }
 
   return (
     <div className="navbar-container">
