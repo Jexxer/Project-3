@@ -28,12 +28,12 @@ function Dashboard({userInfo}) {
   },[])
 
     return (
-      <div className="parent-div">
+      <div className="dashboard-container">
         <div className="navbar">
           <NavBar />
         </div>
         <div className="dashboard-div">
-          <h1>Welcome back {username}!</h1>
+          <h3>Welcome back {username}!</h3>
           <OpenTicket />
           <ClosedTicket />
         </div>

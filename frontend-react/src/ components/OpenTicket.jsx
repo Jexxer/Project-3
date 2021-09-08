@@ -1,6 +1,6 @@
 import React, {useEffect , useState} from 'react';
 import {Link} from 'react-router-dom'
-import '../css/Dashboard.css'
+import '../css/OpenTicket.css'
 
 export default function OpenTicket(props) {
     const [loading , setLoading] = useState(true)
@@ -11,13 +11,16 @@ export default function OpenTicket(props) {
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
             const dateFormated = new Date(tickets[i].dateCreated)
-            ticketArr.push(
-                <div className = 'ticket'>
-                    <span className = 'ticket-title'>{tickets[i].title}</span>
-                    <span className = 'ticket-date'>{dateFormated.toDateString()}</span>
-                    <div className="ticket-status"><span>Status: Pending</span></div>
-                    <button><Link to = {`/tickets/details/${tickets[i]._id}`}>View Ticket</Link></button>
-            </div>)
+            if(tickets[i].isOpen == true){
+                ticketArr.push(
+                <div className = 'open-ticket-item'>
+                    <p className = 'open-ticket-title'>{tickets[i].title}</p>
+                    <p className = 'open-ticket-date'>{dateFormated.toDateString()}</p>
+                    <p className="open-ticket-status">{tickets[i].status}</p>
+                    <Link to = {`/tickets/details/${tickets[i]._id}`}>View Ticket</Link>
+                </div>
+            )}
+            
         }
     } 
 
