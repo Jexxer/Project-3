@@ -1,3 +1,18 @@
 .open-ticket-item{
-    border: 2px solid black;
+    /* border: 2px solid black; */
+}
+
+.accordion-container{
+    
+    margin: 1rem;
+    max-width: 100%;
+    background-color: white;
+}
+
+.open-ticket-link{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    border-radius: 4px;
+    padding: 5px;
 }

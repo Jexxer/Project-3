@@ -39,10 +39,6 @@ function NewTicketPage(props) {
     return (
         <div className="new-bug-page">
 
-            <div className="navbar">
-                <NavBar />
-            </div>
-
             <div className="form-container">
                 <form onSubmit={handlesSubmit}>
                     <h1>New bug Form</h1>

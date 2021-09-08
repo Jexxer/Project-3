@@ -3,6 +3,9 @@ import axios from "axios";
 import ClosedTicket from "./ClosedTicket";
 import OpenTicket from "./OpenTicket";
 import UserInfo from "./UserInfo";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+
 import NavBar from "./NavBar";
 
 
@@ -29,13 +32,21 @@ function Dashboard({userInfo}) {
 
     return (
       <div className="dashboard-container">
-        <div className="navbar">
-          <NavBar />
-        </div>
+          <h3 className="dashboard-welcome-msg">Welcome back {username}!</h3>
         <div className="dashboard-div">
-          <h3>Welcome back {username}!</h3>
-          <OpenTicket />
-          <ClosedTicket />
+        <Tabs>
+          <TabList>
+            <Tab>Open Tickets</Tab>
+            <Tab>Closed Tickets</Tab>
+          </TabList>
+
+          <TabPanel>
+            <OpenTicket />
+          </TabPanel>
+          <TabPanel>
+            <ClosedTicket />
+          </TabPanel>
+        </Tabs>
         </div>
         <div className="usericon-div">
           <UserInfo />
