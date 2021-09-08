@@ -19,7 +19,7 @@ function UserInfo(props) {
         <div className="profile">
           <img
             className="usericon"
-            src={localStorage.getItem("profilePic").replace(/['"]+/g, '')}
+            src={localStorage.getItem("profilePic").replace(/['"]+/g, "")}
             alt="usericon"
             onClick={toggle}
           />
@@ -27,18 +27,27 @@ function UserInfo(props) {
         <div className="menu" style={{ display: userDisplay }}>
           <h3>
             {" "}
-            Mohamed <br /> <span>Level 1 User</span>
+            Hello {localStorage
+              .getItem("loggedInUser")
+              .replace(/['"]+/g, "")}{" "}
+            <br />{" "}
+            <span>
+              {" "}
+              User Level:{" "}
+              {localStorage.getItem("privLevel").replace(/['"]+/g, "")}
+            </span>
           </h3>
           <ul>
             <li>
-              <a href="/users/:id">My Profile</a>
-            </li>
-
-            <li>
-              <button onClick={() => {
-                localStorage.setItem("loggedInUser", JSON.stringify(""));
-                window.location.reload(false)
-              }}>Logout</button>
+              <button
+                className="logout-btn"
+                onClick={() => {
+                  localStorage.setItem("loggedInUser", JSON.stringify(""));
+                  window.location.reload(false);
+                }}
+              >
+                Logout
+              </button>
             </li>
           </ul>
         </div>
