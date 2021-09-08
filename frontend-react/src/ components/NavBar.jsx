@@ -18,9 +18,11 @@ export default function NavBar(props) {
         <a id="tickets" className="menu-item" href="/tickets">
           Tickets
         </a>
-        <a id="settings" className="menu-item" href="/settings">
-          Settings
-        </a>
+        <div className="settings-div">
+          <a id="settings" className="menu-item" href="/settings">
+            Settings
+          </a>
+        </div>
       </Menu>
     </div>
   );
