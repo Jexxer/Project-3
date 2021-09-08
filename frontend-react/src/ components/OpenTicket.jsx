@@ -1,5 +1,12 @@
 import React, {useEffect , useState} from 'react';
 import {Link} from 'react-router-dom'
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
 import '../css/OpenTicket.css'
 
 export default function OpenTicket(props) {
@@ -13,12 +20,20 @@ export default function OpenTicket(props) {
             const dateFormated = new Date(tickets[i].dateCreated)
             if(tickets[i].isOpen == true){
                 ticketArr.push(
-                <div className = 'open-ticket-item'>
-                    <p className = 'open-ticket-title'>{tickets[i].title}</p>
-                    <p className = 'open-ticket-date'>{dateFormated.toDateString()}</p>
-                    <p className="open-ticket-status">{tickets[i].status}</p>
-                    <Link to = {`/tickets/details/${tickets[i]._id}`}>View Ticket</Link>
-                </div>
+                <AccordionItem>
+                    <AccordionItemHeading>
+                        <AccordionItemButton>
+                            {tickets[i].title}
+                        </AccordionItemButton>
+                    </AccordionItemHeading>
+                    <AccordionItemPanel>
+                        <div className="open-ticket-item">
+                            <p className="open-ticket-status">Status: {tickets[i].status}</p>
+                            <p className = 'open-ticket-date'>Date created: {dateFormated.toDateString()}</p>
+                            <Link to = {`/tickets/details/${tickets[i]._id}`} className="open-ticket-link">View Ticket</Link>
+                        </div>
+                    </AccordionItemPanel>
+                </AccordionItem>
             )}
             
         }
@@ -41,18 +56,11 @@ export default function OpenTicket(props) {
     else{
         populateTickets()
         return (
-            <div className = 'open-tickets'>
-                
-                <div className = 'ticket-header'>
-                    <div className = 'ticket-header-openclose'>My open tickets</div>
-                        
-                    <button className = 'submit-bug'><Link to = '/tickets/new'>Submit Bug</Link></button>
-                </div>
-                    
-                <div className = 'ticket-container'>
+
+            <div className="accordion-container">
+                <Accordion>
                     {ticketArr}
-                </div>
-                
+                </Accordion>
             </div>
         );
     }

@@ -1,5 +1,12 @@
 import React, {useEffect , useState} from 'react';
 import {Link} from 'react-router-dom'
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
 import '../css/Dashboard.css'
 
 export default function ClosedTicket(props) {
@@ -10,15 +17,24 @@ export default function ClosedTicket(props) {
     //creatorId
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
-            if(tickets[i].isOpen === false){
+            const dateFormated = new Date(tickets[i].dateCreated)
+            if(tickets[i].isOpen == false){
                 ticketArr.push(
-                    <div className = 'ticket'>
-                        <span className = 'ticket-title'>{tickets[i].title}</span>
-                        <span className = 'ticket-date'>{tickets[i].dateCreated}</span>
-                        <span className = 'ticket-status'>{tickets[i].status}</span>
-                        <button><Link to = {`/tickets/details/${tickets[i].creatorId}`}>View Ticket</Link></button>
-                </div>)
-            }
+                <AccordionItem>
+                    <AccordionItemHeading>
+                        <AccordionItemButton>
+                            {tickets[i].title}
+                        </AccordionItemButton>
+                    </AccordionItemHeading>
+                    <AccordionItemPanel>
+                        <div className="open-ticket-item">
+                            <p className="open-ticket-status">Status: {tickets[i].status}</p>
+                            <p className = 'open-ticket-date'>Date created: {dateFormated.toDateString()}</p>
+                            <Link to = {`/tickets/details/${tickets[i]._id}`} className="open-ticket-link">View Ticket</Link>
+                        </div>
+                    </AccordionItemPanel>
+                </AccordionItem>
+            )}
             
         }
     } 
@@ -40,16 +56,10 @@ export default function ClosedTicket(props) {
     else{
         populateTickets()
         return (
-            <div className = 'open-tickets'>
-                
-                <div className = 'ticket-header'>
-                    <div className = 'ticket-header-openclose'>My closed tickets</div>
-                </div>
-                    
-                <div className = 'ticket-container'>
+            <div className="accordion-container">
+                <Accordion>
                     {ticketArr}
-                </div>
-                
+                </Accordion>
             </div>
         );
     }

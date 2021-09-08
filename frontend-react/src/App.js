@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import "./css/App.css";
+
 import Landing from "./ components/Landing";
 import Dashboard from "./ components/Dashboard";
 import newTicketPage from "./ components/newTicketPage"; // delete
@@ -8,6 +9,7 @@ import Ticket from "./ components/Ticket";
 import myProfile from "./ components/myProfile";
 import Settings from "./ components/Settings";
 import AllTickets from "./ components/AllTickets";
+import NavBar from "./ components/NavBar";
 
 function App() {
   // username storage
@@ -26,7 +28,7 @@ function App() {
   } else {
     return (
       <div className="App">
-
+        <NavBar />
         <Route exact path="/" render={() => (
             <Dashboard userInfo={userInfo} />
           )}/>
