@@ -39,7 +39,6 @@ export default function ClosedTicket(props) {
     }
     else{
         populateTickets()
-        console.log(tickets)
         return (
             <div className = 'open-tickets'>
                 

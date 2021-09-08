@@ -1,5 +1,4 @@
 import React, {useEffect , useState} from 'react';
-import {Link} from 'react-router-dom'
 import '../css/Ticket.css'
 
 export default function Ticket(props) {
@@ -17,7 +16,7 @@ export default function Ticket(props) {
         })
         .catch(err => { console.error(err) });        
         
-    },[])
+    })
     
     if(loading){
         return null;

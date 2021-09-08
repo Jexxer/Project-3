@@ -6,7 +6,7 @@ import gif from '../css/bugsvg.svg'
 function Header() {
   return (
     <div className="loginheader">
-     <img src= {gif}/>
+     <img src= {gif} alt="login-header"/>
      
     </div>
   )

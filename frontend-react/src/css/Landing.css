@@ -1,26 +1,76 @@
-.logincontainer {
-    border: 1px solid red;
-    box-shadow: 10px, 10px, 10px;
-  
+.landing-page-container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 300px;
-    width: 200px;
+    justify-content: center;
+    align-items: center;
 
-	
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-  	
-	margin: auto;
-    padding: 50px;
-    background-color: lightgrey
+    background-image: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgba(37,249,245,1) 0%, rgba(8,70,218,1) 90% );
+
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-.item{
-   padding: 6px;
-   
+.login-form-container{
+    display: flex;
+    flex-direction: column;
+
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+
+    width: 60vw;
+    max-width: 400px;
+
+    padding: 20px;
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 3px 1px rgb(157, 157, 157);
+}
+
+.login-form{
+    margin: 1rem;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-text{
+    color: #f8f8ff;
+    text-align: center;
+}
+
+
+.landing-text-input{
+    font-size: 1rem;
+    border: none;
+    margin: 0.5rem;
+    height: 1.5rem;
+    padding: 5px 12px;
+    border-radius: 1rem;
+}
+
+.landing-text-input:focus{
+    outline: none;
+}
+
+.login-submit-btn{
+    margin: 1.5rem 0;
+    border: none;
+    background-color: #2DB3EB;
+    height: 2rem;
+    border-radius: 1rem;
+    width: 8rem;
+    align-self: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.login-submit-btn:hover,
+.login-submit-brn:focus{
+    background-color: #38F0F3;
+}
+
+.login-failed{
+    color: crimson;
+    align-self: center;
 }
