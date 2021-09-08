@@ -7,29 +7,27 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-import '../css/OpenTicket.css'
+import '../css/Dashboard.css'
 
-export default function OpenTicket(props) {
+export default function ClosedTicket(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
     let url = 'https://bugtracker-api-v1.herokuapp.com/api/tickets'
-
+    //creatorId
     const populateTickets = () => {
         for(let i = 0 ; i < tickets.length ; i++){
             const dateFormated = new Date(tickets[i].dateCreated)
-            if(tickets[i].isOpen == true && tickets[i].creatorId == localStorage.getItem("userId").replace(/['"]+/g, '')){
+            if(tickets[i].isOpen == false){
                 ticketArr.push(
                 <AccordionItem>
                     <AccordionItemHeading>
                         <AccordionItemButton>
-                            
                             <div className="accordion-title">
                                 <span id="accordion-span-title">{tickets[i].title}</span>
                                 <span className='span-hide'>{tickets[i].status}</span>
                                 <span className='span-hide'>{dateFormated.toDateString()}</span>
                             </div>
-                            
                         </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
@@ -65,7 +63,6 @@ export default function OpenTicket(props) {
     else{
         populateTickets()
         return (
-
             <div className="accordion-container">
                 <Accordion>
                     {ticketArr}

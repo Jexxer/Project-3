@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom'
 import axios from "axios";
 import "../css/newTicketPage.css";
 import NavBar from "./NavBar";
+import UserInfo from "./UserInfo"
 
 function NewTicketPage(props) {
   const [bugTitle, setBugtitle] = useState("");
@@ -15,7 +17,7 @@ function NewTicketPage(props) {
         title: `${title}`,
         dateCreated: Date.now(),
         status: "Pending",
-        creatorId: "none",
+        creatorId: localStorage.getItem("userId").replace(/['"]+/g, ''),
         isOpen: true,
         message: `${message}`,
       })
@@ -53,6 +55,7 @@ function NewTicketPage(props) {
                         <p>Title</p>
                         <input
                         type="text"
+                        className="new-bug-input-1"
                         value={bugTitle}
                         onChange={(e) => setBugtitle(e.target.value)}
                         />
@@ -61,6 +64,7 @@ function NewTicketPage(props) {
                         <p>Bug location? (path/URL)</p>
                         <input
                         type="text"
+                        className="new-bug-input-2"
                         value={bugLocation}
                         onChange={(e) => setBugLocation(e.target.value)}
                         />
@@ -70,6 +74,7 @@ function NewTicketPage(props) {
                         <div className="details-textarea">
                             <textarea
                             rows="5"
+                            className="new-bug-textarea"
                             value={bugDetails}
                             onChange={(e) => setBugDetails(e.target.value)}
                             ></textarea>
@@ -81,6 +86,7 @@ function NewTicketPage(props) {
                 
                 </form>
             </div>
+            <UserInfo />
       </div>
     );
   } else if (isSubmitted) {
@@ -90,6 +96,7 @@ function NewTicketPage(props) {
 
             <dev className="form-submit-right">
               <p>Thanks for submitting!</p>
+              <Link to="/">Dashboard</Link>
             </dev>
         </div>
     );

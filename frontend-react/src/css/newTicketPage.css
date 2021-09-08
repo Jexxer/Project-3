@@ -1,22 +1,21 @@
 .new-bug-page {
   display: flex;
+  background-color: #FAF9F6;
+  height: 100%;
 }
 
 .new-bug-page .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
-  width: 100%;
   height: 100vh;
+  background-color: white;
+  border-radius: 4px;
 }
 
 .new-bug-page form {
   padding: 20px;
-  height: 60vh;
-  width: 40%;
-  min-width: 500px;
-  box-shadow: 0 0 5px 1px grey;
+  width: 100%;
 }
 
 .new-bug-page p {
@@ -25,6 +24,24 @@
 
 .new-bug-page form input {
   width: 40%;
+}
+
+.new-bug-input-1,
+.new-bug-input-2{
+  border: 1px solid lightgray;
+}
+
+.new-bug-input-1:focus,
+.new-bug-input-2:focus{
+  outline: none;
+}
+
+.new-bug-textarea{
+  border: 1px solid lightgray;
+}
+
+.new-bug-textarea:focus{
+  outline: none;
 }
 
 .new-bug-page form textarea {
@@ -42,9 +59,26 @@
 }
 
 .form-submit-right {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media(min-width: 700px){
+  .new-bug-page{
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+  }
+  .new-bug-page .form-container {
+    box-shadow: 0 0 5px 1px gray;
+    max-width: 600px;
+    max-height: 700px;
+  }
 }
