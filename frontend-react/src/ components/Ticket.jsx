@@ -1,7 +1,6 @@
 import React, {useEffect , useState} from 'react';
 import '../css/Ticket.css'
 import axios from "axios";
-import e from 'cors';
 
 export default function Ticket(props) {
     const [loading , setLoading] = useState(true)

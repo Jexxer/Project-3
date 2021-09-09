@@ -92,6 +92,7 @@ function Work(props) {
                 <div>
                     <h1>You do not have permision to view this page!</h1>
                     <Link to="/">Home</Link>
+                    <UserInfo/>
                 </div>
             )
         }

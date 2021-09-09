@@ -50,6 +50,9 @@ export default function NavBar({ userInfo }) {
           <a id="tickets" className="menu-item" href="/tickets">
             Tickets
           </a>
+          <a id="work-assigned-link" className="menu-item" href="/work">
+            Work Assigned
+          </a>
           <a id="admin-link" className="menu-item" href="/admin">
             Admin
           </a>
