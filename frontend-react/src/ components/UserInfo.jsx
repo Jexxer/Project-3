@@ -37,8 +37,8 @@ function UserInfo(props) {
               {localStorage.getItem("privLevel").replace(/['"]+/g, "")}
             </span>
           </h3>
-          <ul>
-            <li>
+          
+            
               <button
                 className="logout-btn"
                 onClick={() => {
@@ -48,8 +48,8 @@ function UserInfo(props) {
               >
                 Logout
               </button>
-            </li>
-          </ul>
+            
+          
         </div>
       </div>
     </div>
