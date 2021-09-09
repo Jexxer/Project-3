@@ -44,7 +44,7 @@ function Admin(props) {
         return (
             <div className="admin-page-container">
                 <h1 id="admin-page-title">BugTracker</h1>
-                <h3>Add User</h3>
+                <h3>Add Employee</h3>
                 <div className="admin-user-form-container">
                     <form onSubmit={handleSubmit} className="admin-user-form">
                         <div className="form-partition-top">
