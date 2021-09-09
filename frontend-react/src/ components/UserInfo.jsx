@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import usericon from "../usericon.png";
 import "../css/UserInfo.css";
+import LogoutSVG from "../svgsource/182-startup-2.svg";
 
 function UserInfo(props) {
   const [userDisplay, setUserDisplay] = useState("none");
@@ -37,19 +38,19 @@ function UserInfo(props) {
               {localStorage.getItem("privLevel").replace(/['"]+/g, "")}
             </span>
           </h3>
-          
-            
-              <button
-                className="logout-btn"
-                onClick={() => {
-                  localStorage.setItem("loggedInUser", JSON.stringify(""));
-                  window.location.reload(false);
-                }}
-              >
-                Logout
-              </button>
-            
-          
+
+          <div className="logout-svg-div">
+            <img src={LogoutSVG} alt="logout" />
+            <button
+              className="logout-btn"
+              onClick={() => {
+                localStorage.setItem("loggedInUser", JSON.stringify(""));
+                window.location.reload(false);
+              }}
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </div>
     </div>
