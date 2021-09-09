@@ -10,6 +10,7 @@ import myProfile from "./ components/myProfile";
 import Settings from "./ components/Settings";
 import AllTickets from "./ components/AllTickets";
 import NavBar from "./ components/NavBar";
+import Work from "./ components/Work"
 
 function App() {
   // username storage
@@ -32,7 +33,7 @@ function App() {
         <Route exact path="/" render={() => (
             <Dashboard userInfo={userInfo} />
           )}/>
-
+        <Route exact path="/work" component={Work} />
         <Route exact path="/users/:id" component={myProfile} />
         <Route exact path="/tickets/new" component={newTicketPage} />
         <Route exact path="/tickets/details/:id" component={Ticket} />

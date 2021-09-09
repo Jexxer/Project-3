@@ -9,7 +9,7 @@ import {
 } from 'react-accessible-accordion';
 import '../css/Dashboard.css'
 
-export default function ClosedTicket(props) {
+export default function AllClosedTickets(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
