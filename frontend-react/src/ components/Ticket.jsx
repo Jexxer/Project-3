@@ -1,6 +1,7 @@
 import React, {useEffect , useState} from 'react';
 import '../css/Ticket.css'
 import axios from "axios";
+import e from 'cors';
 
 export default function Ticket(props) {
     const [loading , setLoading] = useState(true)
@@ -9,10 +10,28 @@ export default function Ticket(props) {
     const [updateDisplay, setUpdateDisplay] = useState('none')
     const [openClose , setOpenClose] = useState(null)
     const [buttonToggle , setButtonToggle] = useState(null)
+    const [descriptionValue , setDescriptionValue] = useState(null)
 
     let url = `https://bugtracker-api-v1.herokuapp.com/api/tickets/${props.match.params.id}`
     let userUrl;
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(descriptionValue)
+        axios
+            .put(`https://bugtracker-api-v1.herokuapp.com/api/tickets/${props.match.params.id}`, {
+                devNotes: descriptionValue
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .finally( () => {
+                window.location.reload(false)
+            }) 
+    }
     const ticketFetch = () =>{
         fetch(url)
         .then(res => res.json())
@@ -78,7 +97,6 @@ export default function Ticket(props) {
             }) 
         }
         
-
     }
     const updateDescription = () => {
         if(updateDisplay == 'none'){
@@ -108,19 +126,26 @@ export default function Ticket(props) {
                     <button className = 'ticket-header-button' onClick = {updateDescription}>Update Ticket</button>
                     <input type = 'button' className = 'ticket-header-button' onClick = {updateStatus} value = {buttonToggle} />
                 </div>
-                <ul>
-                    <li><span>Email: </span>{userInfo.email}</li>
-                    <li id = 'title'><span>Title:</span> {tickets.title}</li>
-                    <li id = 'status'><span>Status:</span>{tickets.status}</li>
-                    <li id = 'id'><span>Creator's ID:</span>{tickets.creatorId}</li>
-                    <li id = 'date'><span>Created:</span>{tickets.dateCreated}</li>
-                    <li id = 'message'><span>Message:</span>{tickets.message}</li>
-                </ul>
+                <div className = 'ticket-list'>
+                    <p><span>Email: </span>{userInfo.email}</p>
+                    <p><span>Title:</span> {tickets.title}</p>
+                    <p><span>Status:</span>{tickets.status}</p>
+                    <p><span>Creator's ID:</span>{tickets.creatorId}</p>
+                    <p><span>Created:</span>{tickets.dateCreated}</p>
+                    <p><span>Message:</span>{tickets.message}</p>
+                    <p><span>Dev Notes:</span>{tickets.devNotes || 'No Dev Notes'}</p>
+                </div>
                 <div className = 'form' style = {{display: updateDisplay}}>
-                    <form action="/action_page.php">
+                    <form onSubmit = {handleSubmit}>
                         <label for="form-title">Ticket Description:</label>
-                        <input type="form-textbox"/>
-                        <input type="submit" value="Update" />
+                        <textarea 
+                            className = 'devnotes-textarea'
+                            rows = '10'
+                            placeholder = 'Developer Comments'
+                            required
+                            onChange = {(e) => setDescriptionValue(e.target.value)}
+                        />
+                        <input type="submit" value="Update"/>
                     </form>
                 </div>
                     
