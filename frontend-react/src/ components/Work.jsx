@@ -80,9 +80,9 @@ function Work(props) {
                     <h1>BugTracker</h1>
                     <h2>Your work orders</h2>
                     <div className="work-accordion-container">
-                        <Accordion>
-                            {workOrders}
-                        </Accordion>
+                            <Accordion>
+                                {workOrders}
+                            </Accordion>
                     </div>
                     <UserInfo/>
                 </div>

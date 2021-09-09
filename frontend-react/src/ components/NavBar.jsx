@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/NavBar.css";
-import { slide as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 import monitorSVG from "../svgsource/190-monitor-1.svg";
 import ticketSVG from "../svgsource/215-ticket-1.svg";
 
@@ -35,11 +35,6 @@ export default function NavBar({ userInfo }) {
         <a id="work-assigned-link" className="menu-item" href="/work">
           Work Assigned
         </a>
-        <div className="settings-div">
-          <a id="settings" className="menu-item" href="/settings">
-            Settings
-          </a>
-        </div>
       </Menu>
     );
   } else if (localStorage.getItem("privLevel").replace(/['"]+/g, "") == "3") {
@@ -57,11 +52,6 @@ export default function NavBar({ userInfo }) {
           <a id="admin-link" className="menu-item" href="/admin">
             Admin
           </a>
-          <div className="settings-div">
-            <a id="settings" className="menu-item" href="/settings">
-              Settings
-            </a>
-          </div>
         </Menu>
     )
   }

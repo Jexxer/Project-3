@@ -84,3 +84,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .navbar-menu-div img {
   width: 40px;
 }
+
+#dashboard,
+#tickets,
+#work-assigned-link,
+#admin-link{
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#dashboard:hover,
+#tickets:hover,
+#work-assigned-link:hover,
+#admin-link:hover{
+  color: red;
+}

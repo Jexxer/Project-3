@@ -11,12 +11,13 @@ function NewTicketPage(props) {
   const [bugDetails, setBugDetails] = useState("");
   const [isSubmitted, setIsSubmitted] = useState("");
 
-  function postTicket(title, message) {
+  function postTicket(title, message, path) {
     axios
       .post("https://bugtracker-api-v1.herokuapp.com/api/tickets", {
         title: `${title}`,
         dateCreated: Date.now(),
-        status: "Pending",
+        bugLocation: `${path}`,
+        status: "Pending Review",
         creatorId: localStorage.getItem("userId").replace(/['"]+/g, ''),
         isOpen: true,
         message: `${message}`,
@@ -31,7 +32,7 @@ function NewTicketPage(props) {
 
   function handlesSubmit(e) {
     e.preventDefault();
-    postTicket(bugTitle, bugDetails);
+    postTicket(bugTitle, bugDetails, bugLocation);
     setBugDetails("");
     setBugtitle("");
     setBugLocation("");
