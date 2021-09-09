@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import ClosedTicket from "./ClosedTicket";
 import AllOpenTickets from "./AllOpenTickets"
 import AllClosedTickets from "./AllClosedTickets"
 import UserInfo from "./UserInfo";
@@ -10,7 +9,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import NavBar from "./NavBar";
 
 
-function Dashboard({userInfo}) {
+function AllTickets({userInfo}) {
 
   const username = localStorage.getItem("loggedInUser").replace(/['"]+/g, '') // regex to remove double quotes around username
 
@@ -33,7 +32,7 @@ function Dashboard({userInfo}) {
 
     return (
       <div className="dashboard-container">
-          <h1>BugTracker</h1>
+        <h1>BugTracker</h1>
             <h3 className="dashboard-welcome-msg">All tickets</h3>
         <div className="dashboard-div">
         <Link to="/tickets/new" className="dashboard-new-bug-link">New Ticket</Link>
@@ -59,4 +58,4 @@ function Dashboard({userInfo}) {
   
 }
 
-export default Dashboard;
+export default AllTickets;

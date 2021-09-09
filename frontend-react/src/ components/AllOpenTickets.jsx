@@ -9,7 +9,7 @@ import {
 } from 'react-accessible-accordion';
 import '../css/OpenTicket.css'
 
-export default function OpenTicket(props) {
+export default function AllOpenTickets(props) {
     const [loading , setLoading] = useState(true)
     const [tickets , setTickets] = useState(null)
     let ticketArr = []
