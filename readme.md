@@ -18,24 +18,22 @@ This is a Full MERN Stack bug tracking system web application. It's an in-house 
 
 ## WireFrames
 
-<img src="landingpage-wireframe.png" alt="drawing" width="200"/>
-<img src="level1-wireframe.png" alt="drawing" width="200"/>
-<img src="level2-wireframe.png" alt="drawing" width="200"/>
-<img src="level3-wireframe.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/9AaaymE.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/4kIuICu.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/eDY8cqP.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/sZHJIMA.png" alt="drawing" width="200"/>
 
 ## Demo
 
-<img src="landingpage-demo.png" alt="drawing" width="200"/>
-<img src="level1-demo.png" alt="drawing" width="200"/>
-<img src="level2-demo.png" alt="drawing" width="200"/>
-<img src="level2-ticket-demo.png" alt="drawing" width="200"/>
-<img src="level3-demo.png" alt="drawing" width="200"/>
-<img src="level3-admin-demo.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/y0r7qS3.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/BqubC99.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/kfBHwZN.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/DdQNsJt.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/wlOaVlB.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/U34MQX0.png" alt="drawing" width="200"/>
 
-##Log In Access
+## Log In Access
 
 - Level 1 Username: Jexxe Password: password
 - Level 2 Username: Demolevel2 Password: password
 - Level 3(admin) Username: Demolevel3 Password: password
-
-## Resources
