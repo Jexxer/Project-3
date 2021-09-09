@@ -1,6 +1,5 @@
 .new-bug-page {
   display: flex;
-  background-color: #FAF9F6;
   height: 100%;
 }
 
@@ -9,7 +8,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: white;
+  background-color: #FAF9F6;
   border-radius: 4px;
 }
 

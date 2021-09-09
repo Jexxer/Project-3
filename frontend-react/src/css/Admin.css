@@ -1,0 +1,45 @@
+.admin-page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.admin-user-form-container{
+    padding: 1rem;
+    max-width: 500px;
+    background-color: #FAF9F6;
+    box-shadow: 0 0 5px 1px gray;
+    margin-top: 2rem;
+    border-radius: 4px;
+}
+
+#admin-page-title{
+    margin: 1rem;
+}
+
+.admin-user-form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-url-input input{
+    width: 100%;
+}
+
+.admin-user-form input{
+    padding: 0.4rem;
+    margin:1rem;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.admin-user-form input:focus{
+    outline: none;
+}
+
+#admin-add-user-submit{
+    padding: 5px 20px;
+    align-self: center;
+}
