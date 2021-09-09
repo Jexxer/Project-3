@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "./NavBar";
 import UserInfo from "./UserInfo";
 import axios from "axios";
 import {Link} from 'react-router-dom'
@@ -11,6 +10,7 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import '../css/OpenTicket.css'
+import '../css/Work.css'
 
 
 function Work(props) {
@@ -73,12 +73,30 @@ function Work(props) {
             
             
         })    
+
+        if(localStorage.getItem("privLevel").replace(/['"]+/g, '') === "2" || localStorage.getItem("privLevel").replace(/['"]+/g, '') === "3"){
+            return(
+                <div className="work-page-container">
+                    <h1>BugTracker</h1>
+                    <h2>Your work orders</h2>
+                    <div className="work-accordion-container">
+                        <Accordion>
+                            {workOrders}
+                        </Accordion>
+                    </div>
+                    <UserInfo/>
+                </div>
+            )
+        } else {
+            return(
+                <div>
+                    <h1>You do not have permision to view this page!</h1>
+                    <Link to="/">Home</Link>
+                </div>
+            )
+        }
         
-        return(
-            <Accordion>
-                {workOrders}
-            </Accordion>
-        )
+        
             
     }
         
