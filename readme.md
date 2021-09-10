@@ -1,37 +1,41 @@
-# Project 3 [Name]
+# Bug Tracker
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<h1>Bug Tracker</h1>
+<br>
 
-This is a Full Stack MERN bug tracking system application that has 3 different level of users ranging from Low level users to Mid level users and lastly the Admin. Both low and mid-level users can submit a bug they encounter and the Admin will be able to view the submitted issue request. The admin would be able to assemble ticket requests based on status, move the bug to another status, or delete the bug.
-<br/>
+## Team Members
 
-The landing page will require a login for Users to access the site, if the user has forgotten their password, they will have the ability to click the forgot the password button and have that issue resolved quickly. 
+- **Jesse Watson**, Scrum Master (https://github.com/Jexxer)
+- **Mohamed Qasim** (https://github.com/moqasim)
+- **Luke Marino** (https://github.com/lmarin1197)
 
+## Introduction
 
-<img width="1008" alt="login page" src="https://user-images.githubusercontent.com/86312880/132001796-2bafcc4f-98c8-4a96-862f-05e6df2dc7bf.png">
+This is a Full MERN Stack bug tracking system web application. It's an in-house application that allows Users to report bugs. It consists of 3 different level of users ranging from level 1 to level 3. Users are able to report a bug through a ticket submission.
 
-Low level users would only have access to view their submitted tickets on their dashboard. On the dashboard, low-level users would be able to submit a Bug and when a bug is submitted it records the following, the issue, the time it was created and the current status of the bug. They will also have access to the view their closed tickets that contain previous bugs reported.
+- **Level 1** users are your employee users who ONLY have the ability to submit a new ticket and view tickets regarding the bug they reported.
+- **Level 2** users will be able to view the tickets submitted and the tickets assigned to them to resolve from the Admin user (Level 3) and able to update the status of the ticket
+- **Level 3** users also known as the admin users will have full autonomy and be granted access to add new employees, assign priviledge levels, assign work and monitor the status of bugs.
 
+## WireFrames
 
-<img width="1336" alt="Low level user screen" src="https://user-images.githubusercontent.com/86312880/132002861-ec0dfd10-135e-40c4-b578-de45b9c1ebfa.png">
+<img src="landingpage-wireframe.png" alt="drawing" width="200"/>
+<img src="level1-wireframe.png" alt="drawing" width="200"/>
+<img src="level2-wireframe.png" alt="drawing" width="200"/>
+<img src="level3-wireframe.png" alt="drawing" width="200"/>
 
+## Demo
 
-Mid-level Users would have access to a time table containing how many issue requests were completed, currently open and the average time in the time frames of "today, week, month and all time". Mid level users would also have access to view the status of a submitted bug in the Needs Attention section. Where they will find the reported issue and the admin review. 
+<img src="landingpage-demo.png" alt="drawing" width="200"/>
+<img src="level1-demo.png" alt="drawing" width="200"/>
+<img src="level2-demo.png" alt="drawing" width="200"/>
+<img src="level2-ticket-demo.png" alt="drawing" width="200"/>
+<img src="level3-demo.png" alt="drawing" width="200"/>
+<img src="level3-admin-demo.png" alt="drawing" width="200"/>
 
-<img width="1336" alt="Mid level User" src="https://user-images.githubusercontent.com/86312880/132003604-906a198c-d546-46af-993a-86c1909ac02c.png">
+##Log In Access
 
+- Level 1 Username: Jexxe Password: password
+- Level 2 Username: Demolevel2 Password: password
+- Level 3(admin) Username: Demolevel3 Password: password
 
-Lastly the Admin users would be able to have full access in viewing submitted tickets and would allow administrators to configure the bug statuses and to what extent a bug in a particular status can be moved. For example if a User is locked out, the issue might need to get escalated and the admin is able to control the status. Admin is also able to sort and filter within different statuses of the issues reported. 
-
-<img width="1334" alt="Admin User" src="https://user-images.githubusercontent.com/86312880/132004584-8f8b210b-ef90-44ec-926a-a85ae41ea365.png">
-
-<img width="1337" alt="Admin User 2" src="https://user-images.githubusercontent.com/86312880/132004603-371f941c-0a39-4503-9c3e-60826513a6a1.png">
-
-
-=======
-hi this is the dev branch!
->>>>>>> f9d4e4c (dev readme changed)
-=======
->>>>>>> 5e96f33 (initilized startup files)
+## Resources
