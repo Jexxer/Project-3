@@ -17,7 +17,7 @@ This is a Full MERN Stack bug tracking system web application. It's an in-house 
 - **Level 3** users also known as the admin users will have full autonomy and be granted access to add new employees, assign priviledge levels, assign work and monitor the status of bugs.
 
 ## WireFrames
-
+ <!-- Syntax for Images ![Landing Page](landingpage-wireframe.png)  -->
 <img src="landingpage-wireframe.png" alt="drawing" width="200"/>
 <img src="level1-wireframe.png" alt="drawing" width="200"/>
 <img src="level2-wireframe.png" alt="drawing" width="200"/>
